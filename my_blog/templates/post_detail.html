@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{%block content %}
+    <div class="post">
+        <div class="date">
+            {{post.created_at}}
+        </div>
+        <h1>{{post.title}}</h1>
+        <h3>{{post.author.username}}</h3>
+        <p>{{post.text}}</p>
+        <a href="{% url 'edit_post' post_id=post.id %}">edit</a>
+    </div>
+{%endblock%}
