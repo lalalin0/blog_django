@@ -11,4 +11,4 @@ class Post(models.Model):
     created_at = models.DateTimeField(default=timezone.now())
     published_at = models.DateTimeField(blank=True, null=True)
     tags = TaggableManager()
-# Create your models here.
+

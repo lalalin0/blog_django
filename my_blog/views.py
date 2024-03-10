@@ -45,11 +45,11 @@ def posts_by_tag(request, tag_slug):
     return render(request, 'posts_by_tag.html', {'posts': posts, 'tag': tag})
 
 
-def posts_by_author(request, author):
-    posts = Post.objects.filter(author=author)
+def posts_by_author(request, author_id):
+    posts = Post.objects.filter(author=author_id)
     return render(request,
                   'posts_by_author.html',
-                  {'posts': posts, 'author': author})
+                  {'posts': posts, 'author': author_id})
 
 
 def edit_post(request, post_id):
